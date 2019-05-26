@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <div id="text"></div>
+
+  <div id="usd"></div>
+
+  <button type="button" onclick="loadDoc()">Change Content</button>
+
+  <script>
+
+  const apiURL = 'http://data.fixer.io/api/latest?access_key=ffffd4ffde76a5f468b819b62a03da81&symbols=USD,AUD,CAD,NPR,NZD,VND&format=1'
+
+  let xhttp;
+
+  function loadDoc() {    
+    if (window.XMLHttpRequest) {
+      // code for modern browsers
+      xhttp = new XMLHttpRequest();
+    } else {
+      // code for IE6, IE5
+      // xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById('text').innerHTML = this.responseText;
+        const result = this.responseText;
+        console.log(result);
+        document.querySelector('#usd').innerHTML = result['success'];
+      }
+    };
+
+    xhttp.open('GET', apiURL, true);
+    xhttp.send();
+  }
+  </script>
+
+</body>
+</html>

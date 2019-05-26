@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tally Expenses</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+    header {
+        background-image: url('road.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 800px;
+    }
+    .display-1 {
+      font-family: 'Amatic SC', cursive;
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+      <div class="container">
+        <h1 class="display-1 text-white">Sample Trip Journal with Expenses</h1>
+        <p class="col-8 text-white shadow p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit.</p>
+      </div>
+  </header>
+
+
+  <div class="container mt-4">
+
+
+    <div class="row">
+      <div class="col-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>     
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+      <p class="font-weight-bold">The exchange rate on 1 March 2019 was <span id="currentRate">0.123</span> NPR to 1 NZD</p>
+      </div>
+    </div>
+
+    <h2 class="">Day One</h2>
+
+
+    <div class="row">
+      <div class="col-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>      
+      </div>
+    </div>
+
+    
+
+
+    <div class="expense row border border-info p-2 mt-2">
+      <div class="itemTitle col-6">Accomodation</div>
+      <div class="itemTitle col-2 text-secondary d-none">accom</div>
+      <div class="col-2"><span class="itemPriceLocal">500</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span class="itemPriceCustom"></span> NZD</div>
+    </div>
+
+    <div class="expense row border border-info p-2 mt-2">
+      <div class="itemTitle col-6">Food</div>
+      <div class="col-2"><span class="itemPriceLocal">290</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span class="itemPriceCustom"></span> NZD</div>
+    </div>
+
+    <br>
+
+
+    <h2 class="">Day Two</h2>
+    <div class="row">
+      <div class="col-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>       
+      </div>
+    </div>
+    
+
+    <div class="expense row border border-info p-2 mt-2">
+      <div class="itemTitle col-6">Accomodation</div>
+      <div class="col-2"><span class="itemPriceLocal">11</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span class="itemPriceCustom"></span> NZD</div>
+    </div>
+    <div class="expense row border border-info p-2 mt-2">
+      <div class="itemTitle col-6">Food</div>
+      <div class="col-2"><span class="itemPriceLocal">52</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span class="itemPriceCustom"></span> NZD</div>
+    </div>
+
+    <br>
+
+
+    <div class="row">
+      <div class="col-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
+      </div>
+    </div>
+    
+
+    <div class="expense row border border-info p-2 mt-2">
+      <div class="itemTitle col-6">Accomodation</div>
+      <div class="col-2"><span class="itemPriceLocal">50</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span class="itemPriceCustom"></span> NZD</div>
+    </div>
+    <div class="expense row border border-info p-2 mt-2">
+      <div class="itemTitle col-6">Food</div>
+      <div class="col-2"><span class="itemPriceLocal">10</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span class="itemPriceCustom"></span> NZD</div>
+    </div>
+
+
+    <div class="display-3 p-4">Total</div>
+
+    <div class="row border border-info p-2 mt-2 mb-4">
+      <div class="col-6">Total</div>
+      <div class="col-2"><span id="totalPriceLocal">0</span> <span class="localPriceCode">NPR</span></div>
+      <div class="col2">$<span id="totalPriceCustom"></span> NZD</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
+      </div>
+
+    </div>
+
+
+    <br><br><br>
+
+
+
+
+  </div>
+<script>
+
+  const exchangeRate = document.querySelector('#currentRate').innerHTML;
+
+  let totalLocalPrice = 0;
+  let expenseRows = document.getElementsByClassName('expense');
+
+  Array.from(expenseRows).forEach((el) => {
+    localPrice = el.querySelector('.itemPriceLocal').innerHTML;
+    customPrice = el.getElementsByClassName('itemPriceCustom')[0];
+
+    customPrice.innerHTML = convertToCustomPrice(localPrice, exchangeRate);
+
+    totalLocalPrice += Number(localPrice);
+  });
+
+  function convertToCustomPrice(localPrice, exchangeRate) {
+    return parseFloat(localPrice * exchangeRate).toFixed(2);
+  }
+
+  document.getElementById('totalPriceLocal').innerHTML = totalLocalPrice;
+  document.getElementById('totalPriceCustom').innerHTML = convertToCustomPrice(totalLocalPrice, exchangeRate);
+
+
+
+  // document.getElementById('totalPriceCustom').innerHTML = totalCustomPrice;
+
+
+
+
+
+  
+</script>
+</body>
+</html>

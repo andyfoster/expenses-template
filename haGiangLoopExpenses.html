@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ha Giang Loop</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Alegreya|Arapey|Josefin+Slab|Kalam|Nanum+Myeongjo|Oranienbaum|Patrick+Hand|Sorts+Mill+Goudy&display=swap');
+
+    header {
+        background-image: url('images/roadAndFlowers.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom;
+        background-size: cover;
+        height: 800px;
+    }
+    h1 {
+      font-family: 'Amatic SC', cursive;
+    }
+    body  {
+      /*position: relative;*/
+      /*font-family: Arapey;*/
+    }
+
+    section {
+      margin-top: 10px;
+    }
+    .totals {
+      background-image: linear-gradient(#17a1a8, #17a2b8);
+    }
+
+    .currencyCode {
+      margin-left: 2px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+      <div class="container">
+        <h1 class="display-2 text-white col-1">Ha Giang Loop in 3 Days</h1>
+  </header>
+
+
+  <div class="container mt-4">
+
+    <div class="row my-4">
+      <div class="col-4">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+      </div>
+      <div class="col-8">
+        <img class="img-fluid" src="images/route.png">
+      </div>
+
+    </div>
+
+    <section>
+      <div class="row">
+        <div class="col-12 border border-black pt-3 text-center">
+          <p class="font-weight-bold d-inline">The exchange rate on <a href="https://www.exchange-rates.org/history/VND/NPR/T">24 May 2019 was</a> 1 VND to
+            <div class="d-inline" id="currencyPicker">
+              <!-- <span class="btn btn-sm btn-info active" id="usd"><span id="currentRate">0.789</span> <span class="currency">USD</span></span> -->
+              <button class="btn btn-sm btn-outline-dark" id="nzd"><span id="currentRate">0.000065 NZD</span></button>
+              <button class="btn btn-sm btn-outline-primary" id="usd"><span id="currentRate">0.000043 USD</span></button>
+              <button class="btn btn-sm btn-outline-danger" id="cad"><span id="currentRate">0.000058 CAD</button>
+              <button class="btn btn-sm btn-outline-warning" id="jpy"><span id="currentRate">0.0047 JPY</button>
+            </div>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="day">
+      <h2 class="my-4 display-4" id="dayOne">Day Zero - Bus To Ha Giang</h2>
+
+
+      <div class="row">
+        <div class="col-6">
+          <p>Overnight bus. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-6">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image" src="images/andyMask.jpg">
+            <p class="figure-caption text-center">This is a picture of some mountains. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor. </p>
+
+          </figure>
+        </div>
+      </div>
+
+      <div class="expenses">
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Overnight bus for 2 people (return)</div>
+          <div class="col-3"><span class="itemPriceLocal">1,000,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">1 Night in homestay (unexpected)</div>
+          <div class="col-3"><span class="itemPriceLocal">0</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+      </div> <!-- .expenses -->
+
+    </section>
+
+
+    <section class="day">
+      <h2 class="my-4 display-4" id="dayOne">Day One - Ha Giang to Dong Van</h2>
+
+
+      <div class="row">
+        <div class="col-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-6">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image" src="images/roadOverTrees.jpg">
+            <p class="figure-caption text-center">This is a picture of some mountains. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor. </p>
+
+          </figure>
+        </div>
+      </div>
+
+      <div class="expenses">
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Breakfast at Hostel</div>
+          <div class="col-3"><span class="itemPriceLocal">150,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Bike Rental (150,000 VND x 3 days)</div>
+          <div class="col-3"><span class="itemPriceLocal">450,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Bike Insurance (80,000 VND x 3 days)</div>
+          <div class="col-3"><span class="itemPriceLocal">240,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Petrol x2</div>
+          <div class="col-3"><span class="itemPriceLocal">115,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Lemon Snow Drinks</div>
+          <div class="col-3"><span class="itemPriceLocal">60,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Vegetarian Lunch Platter</div>
+          <div class="col-3"><span class="itemPriceLocal">100,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Coconut Coffee x2</div>
+          <div class="col-3"><span class="itemPriceLocal">60,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+        <div class="expense row border border-info p-2 mt-2 rounded shadow">
+          <div class="itemTitle col-5">Hotel "Family Suite" (massive twin room)</div>
+          <div class="col-3"><span class="itemPriceLocal">350,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+      </div> <!-- .expenses -->
+
+
+    </section>
+
+    <section class="day">
+      <h2 class="my-4 display-4" id="dayTwo">Day Two</h2>
+
+      <img class="img-fluid mx-auto shadow mb-4 border border-light rounded" src="images/bridgeSunset.jpg">
+
+      <div class="row">
+
+        <div class="col-12">
+          <p>We drove from Dong Van to Du Gia</p>
+        </div>
+      </div>
+
+
+      <div class="expenses">
+
+        <div class="expense row border border-info p-2 mt-2 rounded-top shadow">
+          <div class="itemTitle col-5">Coconut Coffee x2</div>
+          <div class="col-3"><span class="itemPriceLocal">60,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-top shadow">
+          <div class="itemTitle col-5">Breakfast at Green Karst</div>
+          <div class="col-3"><span class="itemPriceLocal">140,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-top shadow">
+          <div class="itemTitle col-5">Sunblock</div>
+          <div class="col-3"><span class="itemPriceLocal">100,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 shadow">
+          <div class="itemTitle col-5">Petrol in Meo Vac</div>
+          <div class="col-3"><span class="itemPriceLocal">30,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-bottom shadow">
+          <div class="itemTitle col-5">"No meat" Sausage Banh Mi</div>
+          <div class="col-3"><span class="itemPriceLocal">70,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-bottom shadow">
+          <div class="itemTitle col-5">Dinner - "Family Meal" at BB Homestay</div>
+          <div class="col-3"><span class="itemPriceLocal">160,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-bottom shadow">
+          <div class="itemTitle col-5">BB Homestay - "private" room</div>
+          <div class="col-3"><span class="itemPriceLocal">170,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+      </div> <!-- .expenses -->
+
+    </section>
+
+
+    <section class="day">
+      <h2 class="my-4 display-4" id="dayTwo">Day Three - Du Gia to Ha Giang</h2>
+
+      <img class="img-fluid mx-auto shadow mb-4 border border-light rounded" src="images/cowsDuGia.jpg">
+
+      <div class="row">
+
+        <div class="col-12">
+          <p>WWaterfall, long drive though the hills</p>
+        </div>
+      </div> <!-- .row -->
+
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image mx-auto mb-4" src="images/cowsDuGia.jpg">
+            <p class="figure-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. </p>
+          </figure>
+        </div>
+        <div class="col-4">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image mx-auto mb-4" src="images/duGiaHouse.jpg">
+            <p class="figure-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. </p>
+          </figure>
+        </div>
+        <div class="col-4">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image mx-auto mb-4" src="road.jpg">
+            <p class="figure-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  </p>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
+
+      <div class="expenses">
+
+        <div class="expense row border border-info p-2 mt-2 rounded-top shadow">
+          <div class="itemTitle col-5">Breakfast at Homestay</div>
+          <div class="col-3"><span class="itemPriceLocal">120,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-top shadow">
+          <div class="itemTitle col-5">Lunch in Du Gia</div>
+          <div class="col-3"><span class="itemPriceLocal">95,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+        <div class="expense row border border-info p-2 mt-2 rounded-top shadow">
+          <div class="itemTitle col-5">Petrol in Du Gia</div>
+          <div class="col-3"><span class="itemPriceLocal">60,000</span> <span class="localPriceCode">VND</span></div>
+          <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+        </div>
+
+      </div> <!-- .expenses -->
+
+    </section>
+
+    <section>
+      <div class="display-3 p-4" id="totalExpenses">Total</div>
+
+      <div class="row p-4 mt-2 mb-4 totals rounded text-white h4 shadow">
+        <div class="col-5">Total</div>
+        <div class="col-3"><span id="totalPriceLocal">0</span> <span class="localPriceCode">VND</span></div>
+        <div class="col-4 text-right"><span id="totalPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tally Expenses</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+    header {
+        background-image: url('images/roadAndFlowers.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom;
+        background-size: cover;
+        height: 800px;
+    }
+    h1 {
+      font-family: 'Amatic SC', cursive;
+    }
+    body  {
+      position: relative;
+    }
+    section {
+      margin-top: 10px;
+    }
+    .totals {
+      background-image: linear-gradient(#17a1a8, #17a2b8);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+      <div class="container">
+        <h1 class="display-2 text-white">Sample Trip Journal with Expenses</h1>
+        <p class="col-8 text-white shadow p-2">This is a sample travel blog 
+          template with spaces for expenses throughout. Enter the prices in 
+        the local currency and see you the prices in your chosen currency </p>
+      </div>
+  </header>
+
+
+  <div class="container mt-4">
+    <div class="row my-4">
+      <div class="col-12">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>     
+      </div>
+    </div>
+
+    <section> 
+      <div class="row">
+        <div class="col-12 border border-black pt-3 text-center">
+          <p class="font-weight-bold d-inline">The exchange rate on <a href="https://www.exchange-rates.org/history/VND/NPR/T">24 May 2019 was</a> 1 NPR to
+            <div class="d-inline" id="currencyPicker">
+              <!-- <span class="btn btn-sm btn-info active" id="usd"><span id="currentRate">0.789</span> <span class="currency">USD</span></span> -->
+              <button class="btn btn-sm btn-outline-dark" id="nzd"><span id="currentRate">0.014 NZD</span></button>
+              <button class="btn btn-sm btn-outline-info" id="usd"><span id="currentRate">0.0090 USD</span></button>
+              <button class="btn btn-sm btn-outline-danger" id="vnd"><span id="currentRate">210.26 VND</button>
+              <button class="btn btn-sm btn-outline-secondary" id="cad"><span id="currentRate">0.012 CAD</button>
+            </div>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="my-4 display-4" id="dayOne">Day One</h2>
+
+
+      <div class="row">
+        <div class="col-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>      
+        </div>
+        <div class="col-6">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image" src="mountains.jpg">
+            <p class="figure-caption text-center">This is a picture of some mountains. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor. </p>
+            
+          </figure>
+        </div> 
+      </div>
+
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Hostel in Kathmandu</div>
+        <div class="col-3"><span class="itemPriceLocal">500</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Lunch</div>
+        <div class="col-3"><span class="itemPriceLocal">290</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Dinner at Indian Restaurant</div>
+        <div class="col-3"><span class="itemPriceLocal">340</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>      
+    </section>
+
+    <section>
+      <h2 class="my-4 display-4" id="dayTwo">Day Two</h2>
+
+      <img class="img-fluid shadow mx-auto mb-4" src="road.jpg">
+
+      <div class="row">
+      
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>       
+        </div>
+      </div>
+      
+
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">1 Night in Guest House</div>
+        <div class="col-3"><span class="itemPriceLocal">11</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Breakfast & Lunch</div>
+        <div class="col-3"><span class="itemPriceLocal">780</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>      
+    </section>
+
+
+    <section>
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image mx-auto mb-4" src="road.jpg">
+            <p class="figure-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. </p>
+          </figure>
+        </div>
+        <div class="col-4">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image mx-auto mb-4" src="road.jpg">
+            <p class="figure-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. </p>
+          </figure>
+        </div>
+        <div class="col-4">
+          <figure class="figure">
+            <img class="img-fluid shadow figure-image mx-auto mb-4" src="road.jpg">
+            <p class="figure-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  </p>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
+        </div>
+      </div>
+      
+
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Bus to Pokhara</div>
+        <div class="col-3"><span class="itemPriceLocal">300</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Food</div>
+        <div class="col-3"><span class="itemPriceLocal">10000</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+      <div class="expense row border border-info p-2 mt-2 rounded shadow">
+        <div class="itemTitle col-5">Gear Rental</div>
+        <div class="col-3"><span class="itemPriceLocal">1000</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span class="itemPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="display-3 p-4" id="totalExpenses">Total</div>
+
+      <div class="row p-4 mt-2 mb-4 totals rounded text-white h4 shadow">
+        <div class="col-5">Total</div>
+        <div class="col-3"><span id="totalPriceLocal">0</span> <span class="localPriceCode">NPR</span></div>
+        <div class="col-4 text-right"><span id="totalPriceCustom"></span> <span class="currencyCode"></span></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>        
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+
+// load the NZD
+// currencyAction(document.getElementById('nzd'));
+renderPrices(0.014, 'NZD');
+document.querySelector('#nzd').classList.add('active');
+
+document.querySelector('#currencyPicker')
+  .addEventListener('click', currencyAction, true);
+
+
+function currencyAction(el) {
+  const rateInfo = el.srcElement.innerText.split(' ');
+
+  // remove .active class from other buttons and add to this
+  const allButtons = document.querySelectorAll('button');
+  allButtons.forEach((el) => {
+    el.classList.remove('active');
+  });
+  el.target.parentNode.classList.add('active');
+
+  const currencyRate = rateInfo[0];
+  const currencyCode = rateInfo[1];
+
+  renderPrices(currencyRate, currencyCode);
+}
+
+
+function renderPrices(exchangeRate, currencyCode) {
+  let totalLocalPrice = 0;
+  let expenseRows = document.getElementsByClassName('expense');
+  let currencyNameFields = document.querySelectorAll('.currencyCode');
+
+  currencyNameFields.forEach((el) => {
+    el.innerHTML = currencyCode
+  });
+
+
+  Array.from(expenseRows).forEach((el) => {
+    localPrice = el.querySelector('.itemPriceLocal').innerHTML;
+    customPrice = el.getElementsByClassName('itemPriceCustom')[0];
+
+    customPrice.innerHTML = convertToCustomPrice(localPrice, exchangeRate, currencyCode);
+
+    totalLocalPrice += Number(localPrice);
+  });
+
+  document.getElementById('totalPriceLocal').innerHTML = addCommas(totalLocalPrice);
+  document.getElementById('totalPriceCustom').innerHTML = convertToCustomPrice(totalLocalPrice, exchangeRate, currencyCode);
+}
+
+const currencies = {
+  USD: {
+    sign: '$',
+    decimals: 2,
+  },
+};
+
+function convertToCustomPrice(localPrice, exchangeRate, currencyCode) {
+  if (currencyCode === 'VND') {
+    return convertToVND(localPrice, exchangeRate);
+  }
+  return '$' + convertToDecimalPrice(localPrice, exchangeRate);
+}
+
+function convertToDecimalPrice(localPrice, exchangeRate) {
+  const num = parseFloat(localPrice * exchangeRate).toFixed(2);
+  return addCommas(num)
+}
+
+function convertToVND(localPrice, exchangeRate) {
+  const value = Math.round(localPrice * exchangeRate);
+  return addCommas(value);
+}
+
+function addCommas(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}  
+</script>
+</body>
+</html>
