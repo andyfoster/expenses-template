@@ -1,3 +1,13 @@
+function Utilities() {
+  let name = 'me';
+};
+
+const convert = {};
+
+const display = {};
+
+
+
 // load the NZD
 // reactToCurrencySelection(document.getElementById('nzd'));
 const currentNZRate = document.querySelector('#nzd #currentRate').innerHTML.split(' ')[0];
@@ -24,7 +34,6 @@ function reactToCurrencySelection(el) {
   renderPrices(currencyRate, currencyCode);
 }
 
-
 function renderPrices(exchangeRate, currencyCode) {
   const currencyNameFields = document.querySelectorAll('.currencyCode');
 
@@ -34,7 +43,6 @@ function renderPrices(exchangeRate, currencyCode) {
 
   calculateTotal(exchangeRate, currencyCode);
 }
-
 
 function calculateTotal(exchangeRate, currencyCode) {
   let totalLocalPrice = 0;
@@ -46,30 +54,38 @@ function calculateTotal(exchangeRate, currencyCode) {
     const localPrice = removeCommas(el.querySelector('.itemPriceLocal').innerHTML);
     const customPrice = el.getElementsByClassName('itemPriceCustom')[0];
 
-    customPrice.innerHTML = convertToCustomPrice(localPrice, exchangeRate, currencyCode);
+    newPrice = convertToCustomPrice(localPrice, exchangeRate, currencyCode);
+
+
+    customPrice.innerHTML = formatCustomPrice(newPrice, currencyCode);
+
 
     totalLocalPrice += Number(localPrice);
   });
 
-  document.getElementById('totalPriceLocal').innerHTML = addCommas(totalLocalPrice);
+  document.getElementById('totalPriceLocal').innerHTML = Utilities.addCommas(totalLocalPrice);
   document.getElementById('totalPriceCustom').innerHTML = convertToCustomPrice(totalLocalPrice, exchangeRate, currencyCode);
 }
 
-const currencies = {
-  USD: {
-    sign: '$',
-    decimals: 2,
-  },
-};
+
+function formatCustomPrice(newPrice, currencyCode) {
+    if (currencyCode != 'VND' || currencyCode != 'JPY') {
+      return '$' + newPrice;
+    }
+    return newPrice;
+}
 
 function convertToCustomPrice(localPrice, exchangeRate, currencyCode) {
   if (currencyCode === 'VND' || currencyCode === 'JPY') {
     return convertToVND(localPrice, exchangeRate);
   }
-  return '$' + convertToDecimalPrice(localPrice, exchangeRate);
+  return convertToDecimalPrice(localPrice, exchangeRate);
 }
 
-function addCommas(number) {
+// accept Num
+// return string
+
+Utilities.prototype.addCommas = function(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
@@ -77,17 +93,19 @@ function removeCommas(string) {
   return string.replace(/,\s?/g, '');
 }
 
+function convertLocalPriceToCustomPrice(localPrice, exchangeRate) {
+  return localPrice * exchangeRate;
+}
+
 function convertToDecimalPrice(localPrice, exchangeRate) {
   const num = parseFloat(localPrice * exchangeRate).toFixed(2);
-  return addCommas(num)
+  return Utilities.addCommas(num)
 }
 
 function convertToVND(localPrice, exchangeRate) {
   const value = Math.round(localPrice * exchangeRate);
-  return addCommas(value);
+  return Utilities.addCommas(value);
 }
-
-
 
 function appendSectionTotal() {
   const daySections = document.querySelectorAll('section.day');
@@ -153,7 +171,7 @@ appendSectionTotal();
       sectionTotal += Number(removeCommas(row.innerHTML));
     });
 
-    s.querySelector('#subtotalLocal').innerHTML = addCommas(sectionTotal);
+    s.querySelector('#subtotalLocal').innerHTML = Utilities.addCommas(sectionTotal);
 
     // s.querySelector('#subtotalCustom').innerHTML = convertToCustomPrice(sectionTotal, 2, 'NZD');
   })
@@ -179,3 +197,15 @@ function calculateSectionTotal() {
     // s.querySelector('#sectionTotal').innerHTML = 'xxxx';
   });
 }
+
+
+
+
+
+
+const currencies = {
+  USD: {
+    sign: '$',
+    decimals: 2,
+  },
+};
